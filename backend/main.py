@@ -126,9 +126,9 @@ def format_media_item(item: dict, base_url: str) -> dict:
 
 # --- Rotas da API ---
 
-@app.get("/", tags=["Info"])
-def root(request: Request):
-    """Rota inicial com estado da API e links úteis."""
+@app.get("/api", tags=["Info"])
+def api_info(request: Request):
+    """Informações e estado da API."""
     base_url = get_base_url(request)
     return {
         "status": "online",
@@ -335,3 +335,10 @@ def delete_media(media_id: str):
         "message": f"Item '{item_to_delete.get('title')}' eliminado com sucesso.",
         "id": media_id
     }
+
+
+# Monta a aplicação web (Expo Web) para acesso direto pelo navegador na raiz (/)
+WEB_APP_DIR = os.path.join(BASE_DIR, "web_app")
+if os.path.exists(WEB_APP_DIR):
+    app.mount("/", StaticFiles(directory=WEB_APP_DIR, html=True), name="web_app")
+

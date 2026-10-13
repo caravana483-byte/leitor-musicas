@@ -4,8 +4,8 @@ import os
 
 BASE_URL = "http://127.0.0.1:8000"
 
-print("--- 1. Testando GET / ---")
-r = requests.get(f"{BASE_URL}/")
+print("--- 1. Testando GET /api ---")
+r = requests.get(f"{BASE_URL}/api")
 print(f"Status: {r.status_code}")
 print(r.json())
 
