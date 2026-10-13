@@ -89,7 +89,23 @@ for key, item in SAMPLES.items():
         "size_bytes": size_bytes
     })
 
-with open(DB_FILE, "w", encoding="utf-8") as f:
-    json.dump(items, f, indent=2, ensure_ascii=False)
+existing_items = []
+if os.path.exists(DB_FILE):
+    try:
+        with open(DB_FILE, "r", encoding="utf-8") as f:
+            existing_items = json.load(f)
+    except Exception:
+        existing_items = []
 
-print(f"Configuração concluída com sucesso em {DB_FILE}!")
+# Mantém todos os ficheiros do utilizador e apenas acrescenta amostras que faltem
+existing_ids = {i.get("id") for i in existing_items}
+final_items = list(existing_items)
+
+for item in items:
+    if item["id"] not in existing_ids:
+        final_items.append(item)
+
+with open(DB_FILE, "w", encoding="utf-8") as f:
+    json.dump(final_items, f, indent=2, ensure_ascii=False)
+
+print(f"Configuração concluída com sucesso em {DB_FILE}! Total de itens: {len(final_items)}")
