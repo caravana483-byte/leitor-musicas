@@ -1,0 +1,68 @@
+[
+  {
+    "id": "a76fcc79",
+    "title": "A_ni_xaveleli(256k)",
+    "type": "audio",
+    "url": "/uploads/audios/a76fcc79_A_ni_xaveleli(256k).mp3",
+    "filename": "a76fcc79_A_ni_xaveleli(256k).mp3",
+    "artist": "Artista Local",
+    "album": "Ficheiros do Servidor",
+    "description": "",
+    "size_bytes": 4493996
+  },
+  {
+    "id": "98c297c3",
+    "title": "IMG_20260922_152734",
+    "type": "image",
+    "url": "/uploads/images/98c297c3_IMG_20260922_152734.jpg",
+    "filename": "98c297c3_IMG_20260922_152734.jpg",
+    "artist": "",
+    "album": "",
+    "description": "",
+    "size_bytes": 2413619
+  },
+  {
+    "id": "sample_image",
+    "title": "Capa Musical Exemplo",
+    "type": "image",
+    "url": "/uploads/images/exemplo_capa.jpg",
+    "filename": "exemplo_capa.jpg",
+    "artist": "Unsplash",
+    "album": "",
+    "description": "Foto de exemplo para demonstração no app Expo.",
+    "size_bytes": 66852
+  },
+  {
+    "id": "sample_audio",
+    "title": "Acoustic Sample",
+    "type": "audio",
+    "url": "/uploads/audios/exemplo_musica.mp3",
+    "filename": "exemplo_musica.mp3",
+    "artist": "Benjamin Tissot",
+    "album": "Demonstração API",
+    "description": "Ficheiro MP3 servido pelo backend FastAPI.",
+    "size_bytes": 7373059
+  },
+  {
+    "id": "sample_video",
+    "title": "Vídeo Demonstração",
+    "type": "video",
+    "url": "/uploads/videos/exemplo_video.mp4",
+    "filename": "exemplo_video.mp4",
+    "artist": "",
+    "album": "",
+    "description": "Vídeo MP4 em alta qualidade para teste de reprodução.",
+    "size_bytes": 4139823
+  },
+  {
+    "id": "sample_pdf",
+    "title": "Manual e Letra da Música (PDF)",
+    "type": "pdf",
+    "url": "/uploads/pdfs/exemplo_documento.pdf",
+    "filename": "exemplo_documento.pdf",
+    "artist": "",
+    "album": "",
+    "description": "Ficheiro PDF de demonstração para leitura e download.",
+    "size_bytes": 13264
+  }
+]
