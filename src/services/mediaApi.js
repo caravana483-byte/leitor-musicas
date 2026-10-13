@@ -10,8 +10,10 @@ export async function getApiUrl() {
     const saved = await AsyncStorage.getItem(API_URL_STORAGE_KEY);
     if (saved && saved.trim().length > 0) {
       if (
-        (saved.includes("10.0.2.2") && !DEFAULT_API_URL.includes("10.0.2.2")) ||
-        saved.includes("172.16.21.90")
+        saved.includes("10.0.2.2") ||
+        saved.includes("172.16.") ||
+        saved.includes("localhost") ||
+        saved.includes("127.0.0.1")
       ) {
         return DEFAULT_API_URL;
       }

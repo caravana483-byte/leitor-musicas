@@ -6,7 +6,7 @@
 // - No Simulador iOS: use http://localhost:8000
 // - Na Produção / Nuvem (Render, Railway, etc.): use a URL pública (ex: https://sua-api.onrender.com)
 
-export const DEFAULT_API_URL = "http://172.16.23.224:8000";
+export const DEFAULT_API_URL = "https://leitor-musicas.onrender.com";
 
 // Chave para guardar a URL personalizada no AsyncStorage
 export const API_URL_STORAGE_KEY = "@api_backend_url";
